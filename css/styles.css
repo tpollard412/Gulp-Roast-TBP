@@ -1,0 +1,241 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+    background-color: #082B59;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    line-height: 2;
+    border: 2px solid purple;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid yellowgreen;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  /* make images flexible */
+  img {
+    max-width: 100%;
+  }
+  a {
+    color: #59331d;
+    border: #f2f2f2;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  header {
+    /*border-bottom: 10px solid #d98555;*/
+    border: 2px solid #d98555;
+  }
+
+  /*mobile first navbar styling is vertical with centered buttons and logo*/
+  
+  nav {
+    margin: 0 1rem;
+    border: 2px solid grey;
+  }
+/*remove padding, margin, and list styling for all screen sizes*/
+  nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    border: 2px solid purple;
+  }
+
+  /* styling options for buttons across all breakpoints */
+  nav a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 2px dashed olivedrab;
+
+    /* these styles for mobile dimensions only*/
+    margin: 1rem 1rem 2rem 1rem;
+    text-align: center;
+  }
+  /*max width on the image in pixels */
+  nav .logo img {
+    max-width: 200px;
+    border: 2px solid red;
+  }
+  /*flex basis on image container, li*/
+  nav .logo {
+    flex-basis: 100%;
+    text-align: center;
+    margin: 0;
+    border: 2px dashed yellow;
+  }
+
+  nav .logo a {
+    margin: 0;
+  }
+
+  /*hover options for all breakpoints*/
+  nav a:hover {
+    color: #d98555;
+  }
+  /* establishes a white background */
+  .main-bkgd {
+    background: #ffffff url(../media/images/gulp-bottom-beans.jpg) repeat-x bottom;
+    padding-bottom: 300px;
+    border: 2px dotted dodgerblue;
+  }
+  /* sits inside of the white background, centered */
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border: 2px dashed teal;
+  }
+
+  article {
+    font-size: 1.2rem;
+    padding: 0;
+    border: 2px solid tomato;
+  }
+
+  .pourover {
+    border: 2px solid lawngreen;
+    display: block;
+    margin-top: 3rem;
+  }
+
+  .pourover picture {
+    display: inherit;
+  }
+
+  .pourover img {
+    border-radius: 10px;
+    max-width: 100%;
+    display: inherit;
+    margin: 0 auto;
+    border: 2px dotted lightblue;
+  }
+
+  .button {
+    display: inline-block;
+    background-color: #59331D;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    color: #f2f2f2;
+    align-items: center;
+    text-decoration: none;
+    border: 3px solid yellow; /* #59331d;*/
+    font-size: 1.2rem;
+  }
+  .button:hover {
+    background-color: #f2f2f2;
+    color: #59331d;
+  }
+
+  footer {
+    color: #f2f2f2;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+    padding: 0 0.5rem;
+    border: 2px solid darkgoldenrod;
+  }
+  
+  .copyright {
+    padding: 0;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .disclaimer {
+    font-size: 1rem;
+  }
+
+  footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border: 2px dashed papayawhip;
+  }
+
+  footer a {
+    color: #f2f2f2;
+    font-size: 2rem;
+    display: block;
+    margin: 0 1rem 3rem 1rem;
+    padding: 1rem;
+    border: 2px dashed peru;
+  }
+
+  /*tablet dimensions changes nav bar to centered logo stacked on row of buttons*/
+
+  @media (min-width: 600px) {
+    /* switches nav bar links to horizontal row, increases max logo img width, and increases touch space of nav bar links */
+  nav {
+    margin-left: 0;
+  }
+  nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  nav a {
+    margin: 0.5rem 0.5rem 2rem 0.5rem;
+  }
+
+  nav .logo {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  /* displays main content in a row */
+  .main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  article {
+    flex-basis: 69%;
+  }
+  .pourover {
+    flex-basis: 30%;
+  }
+
+  /*increases touch space of social media links*/
+  footer a {
+    padding: 0.5rem 2rem;
+  }
+  }
+
+  /*desktop resolutions display nav bar as single row with logo on left and buttons clustered on right*/ 
+  
+  @media (min-width: 992px) {
+   /*desktop nav bar*/
+    nav ul {
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+    }
+    nav a {
+      margin-top: 5rem;
+    }
+    nav .logo {
+      flex-basis: auto;
+      margin-right: auto;
+    }
+  }
