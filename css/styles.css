@@ -147,13 +147,6 @@ body {
     margin: 2rem 1rem 1rem 1rem;
   }
 
-  /*.productslist {
-    border: 4px dashed magenta;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.5rem;
-  }*/
-
   .productslist h2, p {
     font-size: 1.2rem;
   }
@@ -169,22 +162,38 @@ body {
     border-radius: 10px;
   }
 
-  /*individual items*/
-/*#xpresso, #beantrio, #homebrew {
-  grid-column: span 4;
-  border-radius: 10px;
-  margin: 0.5rem;
-  border: 2px dashed firebrick;
-}
+  #contactmain {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 1.5rem;
+    gap: 2rem;
+  }
 
-#xpressotxt, #beantriotxt, #homebrewtxt {
-  grid-column: span 4;
-  border: 2px dashed purple;
-}
+  .contacttext {
+    padding: 0;
+    border: 2px dashed orangered;
+  }
 
-  #cardtext {
-    grid-column: span 4;
-  }*/
+  .contacttext h1 {
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .contacttext p {
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  #menupic {
+    object-fit: cover;
+    width: 327px;
+    height: 200px;
+    border-radius: 10px;
+    border: 3px dashed blue;
+    margin: 0;
+    padding: 0;
+  }
 
   footer {
     color: #f2f2f2;
@@ -269,11 +278,27 @@ body {
   height: auto;
   margin: 0;
 }
-
 .card h2 {
   margin-top: 0;
 }
 
+#contactmain {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.5rem;
+}
+
+.contacttext {
+  grid-column: 1 / span 4;
+  align-self: center;
+}
+
+#menupic {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  grid-column: 5 / 9;
+}
   /*increases touch space of social media links*/
   footer a {
     padding: 0.5rem 2rem;
@@ -332,6 +357,20 @@ body {
       grid-column: span 4;
       grid-row: span 1;
       border: 2px dashed blue;
+    }
+
+    #contactmain {
+      grid-template-columns: repeat(12, 1fr);
+    }
+    
+    .contacttext {
+      grid-column: 1 / span 7;
+    }
+    
+    #menupic {
+      grid-column: 8 / 13;
+      align-self: center;
+      justify-self: end;
     }
 
     footer a {
