@@ -12,12 +12,10 @@ body {
     padding: 0;
     font-family: 'Lato', sans-serif;
     line-height: 2;
-    border: 2px solid purple;
   }
   
   h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
-    border: 2px solid yellowgreen;
   }
   h1 {
     font-size: 2.5rem;
@@ -34,24 +32,18 @@ body {
     text-decoration: none;
   }
   header {
-    /*border-bottom: 10px solid #d98555;*/
-    border: 2px solid #d98555;
+    border-bottom: 10px solid #d98555;
   }
 
 /*mobile first navbar styling is vertical with centered buttons and logo*/
-  header {
-    border-bottom: 10px solid #d98555;
-  }
   nav {
     margin: 0 1rem;
-    border: 5px solid rebeccapurple;
   }
 /*remove padding, margin, and list styling for all screen sizes*/
   nav ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
-    border: 2px dashed yellow;
   }
 
   /* styling options for buttons across all breakpoints */
@@ -66,12 +58,10 @@ body {
     /*margin: 1rem 1rem 2rem 1rem;*/
     margin: 0.5rem 0.5rem 1rem 0.5rem;
     text-align: center;
-    border: 2px solid violet;
   }
   /*max width on the image in pixels */
   nav .logo img {
     max-width: 200px;
-    border: 2px dashed teal;
   }
   /*flex basis on image container, li*/
   nav .logo {
@@ -79,13 +69,11 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    border: 2px dotted hotpink;
   }
 
   nav .logo a {
     margin: 0;
     padding: 0;
-    border: 2px dashed orange;
   }
 
   /*hover options for all breakpoints*/
@@ -96,7 +84,6 @@ body {
   .main-bkgd {
     background: #ffffff url(../media/images/gulp-bottom-beans.jpg) repeat-x bottom;
     padding-bottom: 300px;
-    border: 2px dotted dodgerblue;
   }
   /* sits inside of the white background, centered */
   .main {
@@ -104,16 +91,51 @@ body {
     margin: 0 auto;
     padding: 2rem;
     display: block;
-    border: 2px dashed teal;
   }
+/*home page styling starts here*/
+em {
+  font-style: italic;
+}
 
+.homebody {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 3rem 2rem;
+  gap: 0.5rem;
+  padding: 0;
+  border-radius: 25px;
+  border: 10px double rgba(89, 51, 29, 1);
+}
+
+.hometext {
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 1fr;
+}
+
+.hometext p {
+  margin: 0;
+  padding: 0;
+}
+
+#homebutton {
+  justify-self: center;
+  align-self: center;
+}
+
+#homeimg {
+  border-radius: 0 0 1rem 1rem;
+  margin: 0;
+}
+
+  /*about page styling starts here*/
   article {
     font-size: 1.2rem;
     padding: 0;
-    border: 2px solid tomato;
   }
   .pourover {
-    border: 2px solid lawngreen;
     display: block;
     margin-top: 3rem;
   }
@@ -125,7 +147,6 @@ body {
     max-width: 100%;
     display: inherit;
     margin: 0 auto;
-    border: 2px dotted lightblue;
   }
   .button {
     display: inline-block;
@@ -135,7 +156,7 @@ body {
     color: #f2f2f2;
     align-items: center;
     text-decoration: none;
-    border: 3px solid yellow; /* #59331d;*/
+    border: 3px solid #59331d;
     font-size: 1.2rem;
   }
   .button:hover {
@@ -171,7 +192,6 @@ body {
 
   .contacttext {
     padding: 0;
-    border: 2px dashed orangered;
   }
 
   .contacttext h1 {
@@ -190,7 +210,6 @@ body {
     width: 327px;
     height: 200px;
     border-radius: 10px;
-    border: 3px dashed blue;
     margin: 0;
     padding: 0;
   }
@@ -320,6 +339,18 @@ body {
       flex-basis: auto;
       margin-right: auto;
     }
+
+    /*home page styling*/
+    .homebody {
+      flex-flow: row-reverse nowrap;
+      justify-content: flex-end;
+      margin: 3rem 5rem;
+    }
+
+    #homeimg {
+      border-radius: 1rem 0 0 1rem;
+    }
+
     .productslist {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -335,13 +366,7 @@ body {
     .productslist p {
       font-size: 1.1rem;
     }
-    /*.card {
-      grid-column: span 4;
-      grid-row: span 2;
-      flex-flow: column nowrap;
-      border: 2px solid darkkhaki;
-    }*/
-
+  
     .card {
       display: contents;
     }
@@ -350,13 +375,11 @@ body {
       grid-column: span 4;
       grid-row: span 1;
       max-width: 100%;
-      border: 2px dashed red;
     }
 
     #xpressotext, #tblendtext, #lroastedtext {
       grid-column: span 4;
       grid-row: span 1;
-      border: 2px dashed blue;
     }
 
     #contactmain {
@@ -376,7 +399,5 @@ body {
     footer a {
       padding: 0.5rem 0.5rem;
     }
-
-
 
   }
