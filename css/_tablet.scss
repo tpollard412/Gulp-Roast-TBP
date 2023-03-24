@@ -1,0 +1,51 @@
+@media (min-width: 600px) {
+
+  /*displays main content in a row for all pages unless otherwise specified*/
+  .main {
+    @include flexrow-wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+/* about page styling starts here */
+  article {
+    flex-basis: 54%;
+  }
+  .pourover {
+    flex-basis: 44%;
+    padding-left: 0.5rem;
+  }
+
+/*displays products page content cards in a row and limits the images max width to a uniform size*/
+.card {
+  @include flexrow-nowrap;
+  align-items: flex-start;
+  gap: 1rem;
+
+  img {
+    max-width: 25rem;
+    margin: 0;
+  }
+  h2 {
+    margin-top: 0;
+  }
+}
+
+/* contact page becomes flex row to display text & image side by side */
+
+#contactmain {
+  @include flexrow-wrap;
+  gap: 1rem;
+}
+
+.contacttext {
+  margin-right: auto;
+}
+
+/* overrides the mobile menu image crop */
+#menupic {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+}

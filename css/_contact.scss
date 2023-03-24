@@ -1,0 +1,11 @@
+.contacttext p {
+      @include nospace;
+      font-size: $mainfontsize;
+    }
+
+  #menupic {
+    margin-top: 2rem;
+    object-fit: cover;
+    width: 327px;
+    height: 200px;
+  }

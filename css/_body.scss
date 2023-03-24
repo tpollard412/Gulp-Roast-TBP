@@ -1,0 +1,55 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+body {
+    background-color: $colorprimary;
+    @include nospace; 
+    font-family: $bodyfont;
+    line-height: 2;
+  }
+
+  h1 {
+    @include h1style;
+  }
+
+  h2 {
+    @include h2style;
+  }
+
+  /* make images flexible */
+  img {
+    max-width: 100%;
+    border-radius: $imgradius;
+  }
+  
+  a {
+    color: $colorsecondary;
+    border: $colorwhite;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+
+  /* establishes a white background */
+  .main-bkgd {
+    background: #ffffff url(../media/images/gulp-bottom-beans.jpg) repeat-x bottom;
+    padding-bottom: 300px;
+  }
+
+  /* sits inside of the white background, centered */
+  .main {
+    max-width: 1200px;
+    @include hcenter;
+    padding: 2rem;
+    display: block;
+  }
+
+/*home page styling starts here*/
+em {
+  font-style: italic;
+}

@@ -1,0 +1,122 @@
+header {
+    border-bottom: 10px solid $coloraccent;
+  }
+
+/*mobile first navbar is vertical with centered buttons and logo*/
+nav {
+   margin: 0 1rem;
+/*remove padding, margin, and list styling for all screen sizes*/
+  ul {
+    @include nospace;
+    list-style-type: none;
+  }
+
+  /* styling options for buttons across all breakpoints, margin and text align are mobile specific */
+  a {
+    font-size: $mainfontsize;
+    color: $colorwhite;
+    text-decoration: none;
+    display: block;
+    @include marpadtotal(0.5rem 0.5rem 1rem 0.5rem, 0.5rem 1rem);
+    /*for mobile dimensions only*/
+    text-align: center;
+  }
+}
+
+/*flex basis on image container, li*/
+nav .logo {
+   flex-basis: 100%;
+   text-align: center;
+   @include nospace;
+   /*max width on the image in pixels */
+   img {
+       max-width: 200px;
+     }
+    a {
+       @include nospace;
+    }
+}
+
+/*hover options for all breakpoints*/
+nav a:hover {
+   color: $coloraccent;
+}
+  
+/*tablet formatting*/
+@media (min-width: 600px) {
+   /* switches nav bar links to horizontal row, increases max logo img width, and increases touch space of nav bar links */
+ nav {
+  margin-left: 0;
+    ul {
+      @include flexrow-wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    a {
+      margin: 0.5rem 0.5rem 2rem 0.5rem;
+    }
+}
+}
+
+/*desktop formatting*/
+@media (min-width: 992px) {
+
+nav ul {
+  @include flexrow-nowrap;
+  justify-content: flex-start;    
+     a {
+       margin-top: 5rem;
+     }
+     .logo {
+       flex-basis: auto;
+       margin-right: auto;
+     }
+    }
+}
+
+/* footer formatting */
+footer {
+    color: $colorwhite;
+    @include flexcol-nowrap;
+    align-items: center;
+    text-align: center;
+    padding: 0 0.5rem;
+  }
+  
+  .copyright {
+    @include marpadtotal(0.5rem 0 0 0, 0);
+    font-size: $mainfontsize;
+  }
+
+  .disclaimer {
+    font-size: 1rem;
+  }
+
+  footer ul {
+    list-style-type: none;
+    @include nospace;
+    @include hcenter;
+    @include flexrow-wrap;
+    justify-content: center;
+  }
+
+  footer a {
+    color: $colorwhite;
+    font-size: 2rem;
+    display: block;
+    @include marpadtotal(0 1rem 3rem 1rem, 1rem);
+  }
+
+/*increases touch space of social media links*/
+@media (min-width: 600px) {
+  footer a {
+    padding: 0.5rem 2rem;
+  }
+}
+
+/* reduces space of social media links at desktop sizes */
+@media (min-width: 992px) {
+  footer a {
+    padding: 0.5rem 0.5rem;
+  }
+}

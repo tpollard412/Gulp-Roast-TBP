@@ -1,0 +1,61 @@
+//spacing related
+@mixin nospace {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin marpadtotal($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin hcenter {
+    margin: 0 auto;
+}
+
+//layout related
+
+//row wrap
+@mixin flexrow-wrap {
+    display: flex;
+    flex-flow: row wrap;
+}
+//row NOwrap
+@mixin flexrow-nowrap {
+    display: flex;
+    flex-flow: row nowrap;
+}
+//column NOwrap
+@mixin flexcol-nowrap {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+//style related
+@mixin buttonstyle {
+    display: inline-block;
+    background-color: $buttonbg;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    color: $buttontext;
+    align-items: center;
+    text-decoration: none;
+    border: 3px solid $buttonbg;
+    font-size: $mainfontsize    
+}
+
+@mixin h1style {
+    font-family: $headerfont;
+    font-size: $header1size;
+}
+
+@mixin h2style {
+    font-family: $headerfont;
+    font-size: $header2size;
+}
+
+//page specific
+@mixin productchunk {
+    grid-column: span 4;
+    grid-row: span 1;
+}

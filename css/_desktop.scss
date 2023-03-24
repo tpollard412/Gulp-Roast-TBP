@@ -1,0 +1,49 @@
+@media (min-width: 992px) {
+  
+/*home page styling*/
+.homebody {
+  flex-flow: row-reverse nowrap;
+  justify-content: flex-end;
+  margin: 2rem 1rem;
+  }
+ 
+ #homeimg {
+  border-radius: 1rem 0 0 1rem;
+  }
+
+/* products styling */
+.productslist {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.5rem;
+    
+  h2 {
+   font-size: $header2size;
+   @include nospace;
+  }
+ 
+  p {
+   font-size: 1.1rem;
+  }
+}
+/* removes card styling so images and text can be displayed as separate chunks of content in grid */
+.card {
+  display: contents;
+  }
+    
+/* image top margin lines up header text with tops of images */
+#xpresso, 
+#tblend, 
+#lroasted {
+  @include productchunk;
+  max-width: 100%;
+  margin-top: 1rem;
+  }
+ 
+#xpressotext,
+#tblendtext,
+#lroastedtext {
+ @include productchunk;
+  }
+}

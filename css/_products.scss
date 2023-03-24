@@ -1,0 +1,13 @@
+#prodheader {
+    margin-top: 2rem;
+  }
+
+  .card {
+    @include flexcol-nowrap;
+    gap: 0.5rem;
+    margin: 0.5rem;
+
+    h2, p {
+      font-size: $mainfontsize;
+    }
+  }

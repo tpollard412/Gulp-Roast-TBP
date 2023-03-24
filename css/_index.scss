@@ -1,0 +1,29 @@
+.homebody {
+    @include flexcol-nowrap;
+    @include marpadtotal(3rem 2rem, 0);
+    gap: 0.5rem;
+    border-radius: 25px;
+    border: 10px double $colorsecondary;
+  }
+  
+  /* grid allows for text and buttons to stack while maintaining a uniform width */
+  .hometext {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 1fr;
+  }
+  
+  .hometext p {
+    @include nospace;
+  }
+  
+  #homebutton {
+    justify-self: center;
+    align-self: center;
+  }
+  
+  #homeimg {
+    border-radius: 0 0 1rem 1rem;
+    margin: 0;
+  }
